@@ -5,8 +5,10 @@ LargestNumber::LargestNumber(){
 
 }
 
-bool LargestNumber::compare(int a, int b)
+bool LargestNumber::compare(int _a, int _b)
 {
+    float a = (float)_a, b = (float)_b;
+
     while (a >= 10) 
     {
         a /= 10;
@@ -19,8 +21,9 @@ bool LargestNumber::compare(int a, int b)
 
     // std::cout<<a<<" "<<b<<std::endl;
 
-    if (a > b) return true;
-    else return false;
+    //if (a == b) return _a > _b;
+
+    return a > b;
 }
 
 void LargestNumber::sortNumbers()
