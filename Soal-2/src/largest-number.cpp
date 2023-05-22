@@ -21,7 +21,7 @@ bool LargestNumber::compare(int _a, int _b)
 
     // std::cout<<a<<" "<<b<<std::endl;
 
-    //if (a == b) return _a > _b;
+    if (a == b) return _a < _b;
 
     return a > b;
 }
