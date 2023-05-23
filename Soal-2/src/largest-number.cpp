@@ -1,5 +1,6 @@
 #include "include/largest-number.hpp"
 #include <iostream>
+#include <conio.h>
 
 LargestNumber::LargestNumber(){
 
@@ -7,22 +8,51 @@ LargestNumber::LargestNumber(){
 
 bool LargestNumber::compare(int _a, int _b)
 {
-    int aC, bC;
+    if (_a == _b)
+    {
+        return false;
+    }
+
+    int aC = 1, bC = 1;
     float a = (float)_a, b = (float)_b;
 
     while (a >= 10) 
     {
+        aC *= 10; 
         a /= 10;
     }
 
     while (b >= 10) 
     {
+        bC *= 10;
         b /= 10;
     }
 
-    // std::cout<<a<<" "<<b<<std::endl;
+    int mod = aC > bC ? aC : bC;
 
-    if (a == b) return _a < _b;
+    // std::cout<<a<<" "<<b<<std::endl;
+    
+    while ((int)a == (int)b && mod != 1)
+    {
+        //std::cout<<"tes"<<std::endl;
+
+        // std::cout<<"_a = "<<_a<<" _a % mod = "<<(_a % mod)<<"_b = "<<_b<<" _b % mod = "<<(_b % mod)<<std::endl;
+        // getch();
+
+        if ( ( (_a % mod) != (_b % mod) ) /*&& (_a % mod != 0) && (_b % mod != 0)*/ )
+        {
+            return (_a % mod) > (_b % mod);
+        }
+
+        // 10 1
+
+        // std::cout<<"mod = "<<mod<<" "<<(_a % mod)<<" "<<" "<<(_b % mod)<<std::endl;
+        // getch();
+
+        mod /= 10;
+    } 
+
+    //if (a == b) return _a < _b;
 
     return a > b;
 }
@@ -54,6 +84,7 @@ std::string LargestNumber::getLargestNumber()
     for (int i = 0; i < num.size(); i++)
     {
         n += std::to_string(num[i]);
+        //n += " ";
     }
 
     return n;
