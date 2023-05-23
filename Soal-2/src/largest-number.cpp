@@ -7,6 +7,7 @@ LargestNumber::LargestNumber(){
 
 bool LargestNumber::compare(int _a, int _b)
 {
+    int aC, bC;
     float a = (float)_a, b = (float)_b;
 
     while (a >= 10) 
