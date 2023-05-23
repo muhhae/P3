@@ -23,7 +23,6 @@ void Parkir::input()
 
 void Parkir::print()
 {
-    system("cls");
     for (int i = 0; i < m_kendaraan.size(); i++)
     {
         std::cout<<"Kendaraan "<<i+1<<std::endl;

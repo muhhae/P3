@@ -7,10 +7,13 @@ int main()
 {
     int k, n;
 
-    cout<<"Kapasistas parkir: "; cin >> k;
     cout<<"Jumlah kendaraan: "; cin >> n;
+    cout<<"Kapasistas parkir: "; cin >> k;
+    
 
     Parkir m_parkir(k, n);
+
+    cout<<"\n";
 
     m_parkir.input();
     m_parkir.print();
