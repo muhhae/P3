@@ -9,7 +9,7 @@ LargestNumber::LargestNumber(){
 
 bool LargestNumber::compare(int _a, int _b)
 {
-    // std::cout<<"A = "<<_a<<" B = "<<_b<<std::endl;
+    // std::cout<<"A0 = "<<_a<<" B0 = "<<_b<<std::endl;
 
     if (_a == _b)
     {
@@ -43,13 +43,18 @@ bool LargestNumber::compare(int _a, int _b)
 
         if (A_digit[iA] == B_digit[iB])
         {
+            // std::cout<<"sama\n";
             if (iA > 0) iA--;
             if (iB > 0) iB--;
         }
 
-        else return A_digit[iA] > B_digit[iB];
+        else 
+        {
+            // std::cout<<"beda\n";
+            return A_digit[iA] > B_digit[iB];
+        }
 
-        if (A_digit[iA] == B_digit[iB] && iA <= 0 && iB <= 0) return false;
+        if (A_digit[iA] == B_digit[iB] && iA <= 0 && iB <= 0) return A_digit.size() < B_digit.size();
     }
     
     return 0;
