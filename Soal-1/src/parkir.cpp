@@ -16,7 +16,6 @@ void Parkir::input()
 {
     for (int i = 0; i < jmlKendaraan; i++)
     {
-        system("cls");
         std::cout<<"Kendaraan "<<i+1<<std::endl;
         tambahKendaraan();
     }

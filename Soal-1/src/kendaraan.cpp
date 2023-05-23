@@ -13,7 +13,7 @@ Kendaraan::Kendaraan()
     while (1)
     {
         int d, p;
-        std::cout<<"datang : "; std::cin>>d;
+        std::cout<<"\ndatang : "; std::cin>>d;
         std::cout<<"pergi : "; std::cin>>p;
 
         if (p <= 24 && p > 1 && d < 24 && d >= 1 && p >= d)
@@ -23,8 +23,8 @@ Kendaraan::Kendaraan()
             break;
         }
 
-        std::cout<<"Data salah, masukkan data kembali (tekan sembarang)"<<std::endl; 
-        getch();
+        std::cout<<"\nData salah, masukkan data kembali \n"<<std::endl; 
+        
     }
 }
 
